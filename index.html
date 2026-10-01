@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna Threads Boutique</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Boutique simulation</p>
+          <h1>Luna Threads</h1>
+        </div>
+        <div class="topbar-stats">
+          <div class="stat-pill">
+            <span>Day</span>
+            <strong id="dayDisplay">1</strong>
+          </div>
+          <div class="stat-pill">
+            <span>Cash</span>
+            <strong id="moneyDisplay">$0</strong>
+          </div>
+          <div class="stat-pill">
+            <span>Reputation</span>
+            <strong id="repDisplay">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <section class="panel inventory-panel">
+          <div class="panel-header">
+            <h2>Style Stock</h2>
+            <button id="resetBtn" class="ghost-button">Reset Shop</button>
+          </div>
+          <div id="inventoryGrid" class="inventory-grid"></div>
+        </section>
+
+        <section class="panel stage-panel">
+          <div class="customer-card">
+            <div class="avatar-wrap">
+              <div id="customerAvatar" class="customer-avatar">A</div>
+            </div>
+            <div class="customer-copy">
+              <p class="eyebrow">Customer</p>
+              <h2 id="customerName">Loading...</h2>
+              <p id="customerProfile"></p>
+            </div>
+          </div>
+
+          <div class="mannequin-box">
+            <div class="mannequin">
+              <div class="figure-head"></div>
+              <div class="figure-neck"></div>
+              <div class="figure-body"></div>
+              <div class="figure-arm arm-left"></div>
+              <div class="figure-arm arm-right"></div>
+              <div class="figure-leg leg-left"></div>
+              <div class="figure-leg leg-right"></div>
+            </div>
+            <div id="outfitPreview" class="outfit-preview"></div>
+          </div>
+
+          <div class="controls">
+            <button id="checkBtn" class="primary-button">Check Fit</button>
+            <button id="sellBtn" class="success-button">Sell to Customer</button>
+            <button id="nextDayBtn" class="secondary-button">Skip Day</button>
+          </div>
+
+          <div id="statusMessage" class="status-box">Pick an outfit to impress the next guest.</div>
+        </section>
+
+        <aside class="panel info-panel">
+          <div class="panel-header">
+            <h2>Customer Brief</h2>
+          </div>
+          <div id="customerRequest" class="customer-request"></div>
+
+          <div class="panel-header compact">
+            <h3>Shop Log</h3>
+          </div>
+          <ul id="shopLog" class="shop-log"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
